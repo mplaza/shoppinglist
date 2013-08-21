@@ -7,14 +7,14 @@ var newItem = 0;
 var functionCalls = 0;
 var addItem = function(){
 	functionCalls++;
-	newID = "checkbox" + functionCalls;
-	shoppingItem = $("#itemToAdd").val();
-	newDiv = document.createElement("div");
+	var newID = "checkbox" + functionCalls;
+	var shoppingItem = $("#itemToAdd").val();
+	var newDiv = document.createElement("div");
 		newDiv.setAttribute("class", "pumpkin");
-	newcheckBox = document.createElement("input");
+	var newcheckBox = document.createElement("input");
 		newcheckBox.setAttribute("id", newID);
 		newcheckBox.setAttribute("type", "checkbox");
-	newItem = document.createElement("label");
+	var newItem = document.createElement("label");
 		newItem.setAttribute("for", newID);
 		newItem.appendChild(document.createTextNode(shoppingItem));
 		newDiv.appendChild(newcheckBox);
@@ -47,14 +47,4 @@ var clearClicked = function(){
 }
 $(".addButton").on("click", addItem);
 $("#clearButton").on("click", clearClicked);
-$("#itemToAdd").focus(function() {
-	if (this.value === this.defaultValue){
-		this.value = " ";
-	}
-})
-.blur(function() {
-	if(this.value === " "){
-		this.value = this.defaultValue;
-	}
-});
 });

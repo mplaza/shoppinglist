@@ -10,10 +10,11 @@ body{
 #listipoo{
 	font-family: Florence, cursive;
 	height:400px;
-	width: 100px;
+	width: 500px;
 	margin-top:100px;
 	margin-left:auto;
 	margin-right: auto;
+	overflow: auto;
 
 }
 .shoppingList{
@@ -37,9 +38,10 @@ body{
 	border-style: solid;
 	border-width: 3px;
 	border-radius: 3px;
-	margin-left: auto;
+	margin-left: 5px;
 	margin-right: auto;
-	margin-top: 10px;
+	margin-top: 0px;
+	float:left;
 }
 #button{
 	margin-right: auto;
@@ -59,11 +61,14 @@ body{
 	font-family: Florence, cursive;
 	height: 25px;
 	width: 70px;
-	margin-left: auto;
+	margin-left: 100px;
 	margin-right: auto;
-	margin-top: 25px;
+	margin-top: 10px;
 }
 #itemToAdd{
 		font-family: Florence, cursive;
 		font-size: 14px;
+}
+.bottomButtons{
+	margin-left: 570px;
 }
