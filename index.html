@@ -3,21 +3,24 @@
 	<title>Shopping List</title>
 	<link rel="stylesheet" href="./main.css" type="text/css" media="screen">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="./main.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id = listipoo>
-	</div>
-	<div class = listAdd>
-		<div id = button>
+	<div id = "listTitle">Shopping List</div>
+	<div id = "listipoo">Other</div>
+	<div class = "produce"><span class ="titlefont">Produce/ Bakery</span></div>
+	<div class = "dairy"><span class ="titlefont">Dairy/Meat</span></div>
+	<div class = "packaged"><span class ="titlefont">Canned/Packaged</span></div>
+	<div class = "frozen"><span class ="titlefont">Frozen Foods</span></div>
+	<div class = "nonfood"><span class ="titlefont">Non-food Items</span></div>
+	<div class = "listAdd">
+		<div id = "button">
 		<input id ="itemToAdd" type = "text" name = "neededItem" value = "coffee">
+		</div>
+		<div id = "addButton">Add</div>
+		<div id="clearButton">Clear</div>
 	</div>
-	</div>
-	<div class = bottomButtons>
-	<div class = addButton>Add</div>
-	
-	<div id=clearButton>Clear</div>
-</div>
 </body>
 
 </html>

@@ -23,6 +23,12 @@ var addItem = function(){
 	var numListItems = $(".pumpkin").length;
 	console.log(numListItems);	
 	console.log( newcheckBox.id );
+	$(".pumpkin").draggable({
+    appendTo: "body",
+    cursor: "move",
+    helper: 'clone',
+    revert: "invalid",
+});
 	$(newcheckBox).change( function (){
 	if(this.checked){
 		console.log("checked");
@@ -42,19 +48,67 @@ var addItem = function(){
 		};
 	};
 var clearClicked = function(){
-	console.log("fired");
 	$(".unchecked").remove();
 }
-$(".addButton").on("click", addItem);
+$("#addButton").on("click", addItem);
+$("#itemToAdd").keypress(function(e){
+	if(e.which==13){
+		addItem();
+	};
+});
 $("#clearButton").on("click", clearClicked);
 $("#itemToAdd").focus(function() {
-	if (this.value === this.defaultValue){
 		this.value = " ";
-	}
 })
 .blur(function() {
 	if(this.value === " "){
 		this.value = this.defaultValue;
 	}
 });
+$(".dairy").droppable({
+    tolerance: "intersect",
+    accept: ".pumpkin",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+        $(this).append($(ui.draggable));
+    }
 });
+$(".packaged").droppable({
+    tolerance: "intersect",
+    accept: ".pumpkin",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+        $(this).append($(ui.draggable));
+    }
+});
+$(".produce").droppable({
+    tolerance: "intersect",
+    accept: ".pumpkin",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+        $(this).append($(ui.draggable));
+    }
+});
+$(".frozen").droppable({
+    tolerance: "intersect",
+    accept: ".pumpkin",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+        $(this).append($(ui.draggable));
+    }
+});
+$(".nonfood").droppable({
+    tolerance: "intersect",
+    accept: ".pumpkin",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+        $(this).append($(ui.draggable));
+    }
+});
+});
+
